@@ -15,6 +15,6 @@
     - '--image'
     - 'gcr.io/$PROJECT_ID/wellwisher:$COMMIT_SHA'
     - '--region'
-    - 'SERVICE_REGION'
+    - 'us-central1'
   images:
   - 'gcr.io/$PROJECT_ID/wellwisher:$COMMIT_SHA'

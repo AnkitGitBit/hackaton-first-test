@@ -13,6 +13,6 @@
 # limitations under the License.
 
 FROM openjdk:11
-ARG JAR_FILE=wellwisher-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=wellwisher*.jar
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]

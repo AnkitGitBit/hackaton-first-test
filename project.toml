@@ -1,2 +1,2 @@
-pack build sample-java --builder=gcr.io/buildpacks/builder \
+pack build sample-java --builder=gcr.io/buildpacks/builder
 --env GOOGLE_RUNTIME_VERSION=17

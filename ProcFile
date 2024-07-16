@@ -1,2 +1,1 @@
-pack build sample-java --builder=gcr.io/buildpacks/builder \
-  --env GOOGLE_RUNTIME_VERSION=17
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/app.jar

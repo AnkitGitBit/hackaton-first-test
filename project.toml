@@ -1,3 +1,2 @@
-pack build my-app \
-    --builder gcr.io/buildpacks/builder:v1 \
+pack build wellwisher \
     --env GOOGLE_RUNTIME_VERSION=17

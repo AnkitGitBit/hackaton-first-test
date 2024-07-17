@@ -1,5 +1,5 @@
 # Stage 1: compile a JAR file
-FROM maven:3-eclipse-temurin-17-alpine as builder
+FROM maven:3.6.3-jdk17.0.6-alpine as builder
 
 # Copy local code to the container image.
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY src ./src
 RUN mvn package -DskipTests
 
 # Stage 2: run the previously built JAR file
-FROM adoptopenjdk/openjdk11:jdk-11.0.11_9-alpine-slim
+FROM openjdk:17-jdk-alpine
 
 COPY --from=builder /app/target/cloudrun-*.jar /cloudrun.jar
 

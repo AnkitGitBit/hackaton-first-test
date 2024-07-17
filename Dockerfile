@@ -12,7 +12,7 @@ RUN mvn package -DskipTests
 # Stage 2: run the previously built JAR file
 FROM openjdk:17-jdk-alpine
 
-COPY --from=builder /app/target/cloudrun-*.jar /cloudrun.jar
+COPY --from=builder /app/target/wellwisher-*.jar /wellwisher.jar
 
 # Run the web service on container startup.
-CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dserver.port=${PORT}","-jar","/cloudrun.jar"]
+CMD ["java","-Djava.security.egd=file:/dev/./urandom","-Dserver.port=${PORT}","-jar","/wellwisher.jar"]

@@ -1,5 +1,5 @@
 # Stage 1: compile a JAR file
-FROM maven:3.6.3-jdk-11-slim as builder
+FROM maven:3-eclipse-temurin-17-alpine as builder
 
 # Copy local code to the container image.
 WORKDIR /app

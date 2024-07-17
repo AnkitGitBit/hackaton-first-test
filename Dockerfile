@@ -1,5 +1,5 @@
 # Stage 1: compile a JAR file
-FROM maven:3.6.3-jdk17.0.6-alpine as builder
+FROM maven:3.8.5-openjdk-17-slim as builder
 
 # Copy local code to the container image.
 WORKDIR /app
